@@ -1,0 +1,202 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "python.execInTerminal"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+f10",
+        "command": "-editor.action.showContextMenu",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+f9",
+        "command": "code-runner.run"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-code-runner.run"
+    },
+    {
+        "key": "shift+u",
+        "command": "extension.vim_ctrl+r",
+        "when": "textInputFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly && !notebookCellFocused"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "escape",
+        "command": "-notebook.cell.quitEdit",
+        "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
+    },
+    {
+        "key": "escape",
+        "command": "-notebook.cell.quitEdit",
+        "when": "inputFocus && notebookEditorFocused && vim.active && !editorHasSelection && !editorHoverVisible && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-extension.vim_ctrl+v",
+        "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-extension.vim_ctrl+c",
+        "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-extension.vim_ctrl+f",
+        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "notebook.cell.execute",
+        "when": "vim.mode != 'Insert' && notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "meta+enter",
+        "command": "-notebook.cell.execute",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-notebook.cell.executeAndInsertBelow",
+        "when": "notebookCellListFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-editor.action.selectAllMatches",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+f10",
+        "command": "editor.debug.action.toggleInlineBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+f9",
+        "command": "-editor.debug.action.toggleInlineBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+f9",
+        "command": "raspberry-pi-pico.runProject",
+        "when": "raspberry-pi-pico.isPicoProject"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-extension.vim_ctrl+x",
+        "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-extension.vim_ctrl+r",
+        "when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-extension.vim_ctrl+x",
+        "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-extension.vim_ctrl+r",
+        "when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    }
+]

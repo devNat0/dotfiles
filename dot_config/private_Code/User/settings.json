@@ -1,0 +1,24 @@
+{
+    "workbench.sideBar.location": "right",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.colorTheme": "Dracula Refined",
+    "editor.fontFamily": "Fira Code Retina",
+    "editor.fontLigatures": true,
+    "keyboard.dispatch": "keyCode",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    // 
+    "extensions.ignoreRecommendations": true,
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.typeCheckingMode": "standard",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "update.showReleaseNotes": false,
+    //
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "chat.titleBar.signIn.enabled": false,
+    "chat.agent.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "chat.disableAIFeatures": true,
+}

@@ -1,0 +1,47 @@
+2 screens: Height=1368
+2 screens: Width=1280
+2 screens: XPosition=1280
+2 screens: YPosition=268
+DP-2 DP-4=DP-2
+MenuBar=Disabled
+
+[Desktop Entry]
+DefaultProfile=konsolep.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+1080x1920 screen: Height=1844
+1080x1920 screen: Width=532
+1080x1920 screen: Window-Maximized=true
+2 screens: Height=928
+2 screens: Width=1072
+2 screens: XPosition=2564
+2 screens: YPosition=28
+2560x1440 screen: Height=1364
+2560x1440 screen: Width=1272
+2560x1440 screen: XPosition=1284
+2560x1440 screen: YPosition=28
+3 screens: Height=1364
+3 screens: Width=1272
+DP-2=DP-2
+DP-2 DP-4=DP-4
+
+[MainWindow][Toolbar sessionToolbar]
+ToolButtonStyle=TextUnderIcon
+
+[Notification Messages]
+CloseAllTabs=true
+
+[SplitView]
+SplitViewVisibility=AlwaysHideSplitHeader
+
+[TabBar]
+TabBarVisibility=AlwaysHideTabBar
+
+[Toolbar sessionToolbar]
+ToolButtonStyle=TextUnderIcon
+
+[UiSettings]
+ColorScheme=

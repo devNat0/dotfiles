@@ -1,0 +1,38 @@
+export LANG=en_US.UTF-8
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="dracula"
+DISABLE_AUTO_UPDATE="true"
+#DISABLE_UPDATE_PROMPT="true"
+DISABLE_MAGIC_FUNCTIONS="true"
+
+FPROMPT='%F{blue}%~%f%F{13}\U1FBB2\U1FBB3 %f'
+plugins=(git fprompt docker-compose)
+source $ZSH/oh-my-zsh.sh
+PROMPT=$'%(?.%F{green}\U1FBC6 %f.%F{red}\U1FBC5 %f)%F{magenta}\U1F892%f'
+
+#PS1=$'%F{blue}%~%f%F{13}\U1FBB2\U1FBB3 %f'
+
+unsetopt HIST_VERIFY
+
+function start_tmux() {
+    [ -x "$(command -v tmux)" ] && [ ! -z ${KONSOLE_DBUS_WINDOW} ]\
+    && [ -z "${TMUX}" ] \
+    && { tmux attach || tmux; } >/dev/null 2>&1
+}
+start_tmux
+#PS1=$'%(?.%F{green}\U1FBC6 %f.%F{196}\U238B %f)%F{blue}%~%f%F{13}\U1FBB2\U1FBB3 %f\n'
+
+# fpath=(/usr/share/zsh/site-functions $fpath)
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export EDITOR='/usr/bin/vim'
+export BAT_THEME="Dracula"
+export PATH="$HOME/go/bin:$PATH"
+source ~/.zsh_aliases.zsh
+
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
